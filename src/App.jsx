@@ -189,7 +189,7 @@ const [isPlaying, setIsPlaying] = useState(false);
 
 <div className="flex gap-3 flex-col items-center justify-center bg-[#0C0C0E] min-h-screen p-3">
 <h1 className="text-white">Lista de Exitos:</h1>
-<div className="flex gap-2 flex-wrap">
+<div className="flex gap-2 flex-wrap items-center justify-center">
 <Portada musica={BesosSaborRon} setCancion={setCancion} setIsPlaying={setIsPlaying}></Portada>
 <Portada musica={Pico} setCancion={setCancion} setIsPlaying={setIsPlaying}  ></Portada>
 <Portada musica={CiudadGris} setCancion={setCancion} setIsPlaying={setIsPlaying}  ></Portada>
