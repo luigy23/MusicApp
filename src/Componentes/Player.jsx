@@ -16,7 +16,7 @@ const Player = ({musica, cerrar}) => {
  const lyrics = (e)=>{
 
   let tiempo = e.target.currentTime;
-setVersoTime(tiempo);
+//setVersoTime(tiempo);
 
     // Recorremos el objeto de texto y tiempos
     textTimings.forEach(timing => {
@@ -39,7 +39,7 @@ setVersoTime(tiempo);
   return (
    
     <div className='space-y-3 w-full flex justify-center items-center flex-col '>
-      <h1>{titulo}</h1>
+      <h1 className='text-green-300'>{titulo}</h1>
       <div className='portada '>
     <img  src={imagen} alt="" />
   </div>
@@ -90,7 +90,7 @@ key={text}
       <audio className='w-full' id={nombre} onTimeUpdate={(e)=>lyrics(e)} src={cancion} controls autoPlay={true}  />
       
       </div>
-      <p className='text-white'>{versoTime}</p>
+      {/* <p className='text-white'>{versoTime}</p> */}
       <button 
       onClick={()=>{cerrar(false); document.getElementById(nombre).pause()}}
       className='bg-slate-50 py-1 px-3 rounded-lg font-semibold hover:rounded-3xl transition-all ease-in-out'>Volver</button>

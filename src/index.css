@@ -30,7 +30,7 @@ h1{
   @apply transition-all ease-in-out  duration-500
 }
 .portada{
-  @apply relative  h-40 w-40 border-white overflow-hidden rounded-xl
+  @apply relative  h-32 w-32 border-white overflow-hidden rounded-xl
 }
 .overlay{
   @apply div absolute z-10 flex w-full h-full bg-black bg-opacity-0  text-white  cursor-pointer 
@@ -108,4 +108,13 @@ h1{
     top: 0.5rem;
     right: 0.5rem;
     position: absolute;
+  }
+
+
+  .article{
+    @apply z-20   flex-col top-0 left-0 absolute min-w-full items-center justify-center bg-[#0C0C0E] h-full p-3
+  }
+  .article::before{
+    filter: 'blur(20px)'
+    
   }

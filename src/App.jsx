@@ -4,6 +4,7 @@ import picoimg from "./assets/pico.jpeg";
 import besosimg from "./assets/besos.jpg";
 import ciudadimg from "./assets/ciudadgris.jpg";
 import costumbreimg from "./assets/costumbre.png";
+import perdonimg from './assets/perdon.jpg';
 import Player from "./Componentes/Player";
 import { Portada } from "./Componentes/Portada";
 import { useState } from "react";
@@ -139,6 +140,33 @@ const CiudadGris = {
   cancion:"https://od.lk/s/MjFfNDc0MzMzNThf/ciudadgtus.mp3"
 }
 
+const Perdon = {
+
+  titulo:"Otra vez Perdón",
+  artista:"Luigy Leonardo",
+  nombre: "perdon",
+  imagen:perdonimg,
+  luigiin:5,
+  letra: [
+    { text: 'ay por favor', time: 1},
+    { text: 'otra vez perdón?', time: 1.8},
+    { text: 'ese cuentico ya cansó', time: 3},
+    { text: 'o tal vez el cansón soy yo', time: 7},
+    { text: 'y no tengo la razón', time:11},
+    { text: 'pero da igual', time: 14},
+    { text: 'yo ya me cansé', time: 15.8},
+    { text: 'pues cada quien', time: 17},
+    { text: 'yo ya no discutiré', time: 22},
+    { text: 'no digo na, e intentaré', time: 28},
+    { text: 'que todo me de igual', time: 31},
+    { text: 'ay, por favor ¿otra vez perdón?', time: 35},
+    
+
+
+ ,
+  ],
+  cancion:"https://od.lk/s/MjFfNDc0MzMzMTZf/WhatsApp-Audio-2023-02-11-at-9.02.28-PM.mp3"
+}
 
 const [isPlaying, setIsPlaying] = useState(false);
 
@@ -149,8 +177,9 @@ const [isPlaying, setIsPlaying] = useState(false);
 
 {/* creacion de un componente modal: */}
 {isPlaying? (
-  <article className={` ${isPlaying?"flex":"hidden"} z-20   flex-col top-0 left-0 absolute min-w-full items-center justify-center bg-[#0C0C0E] h-full p-3`}>
-<div className="flex gap-2 w-full">
+<article
+   className={` ${isPlaying?"flex":"hidden"} article`}>
+<div className="flex gap-2 w-full filter-none z-40">
 <Player cerrar={setIsPlaying}  musica={cancion} />
 </div>
 </article>
@@ -164,12 +193,11 @@ const [isPlaying, setIsPlaying] = useState(false);
 <Portada musica={BesosSaborRon} setCancion={setCancion} setIsPlaying={setIsPlaying}></Portada>
 <Portada musica={Pico} setCancion={setCancion} setIsPlaying={setIsPlaying}  ></Portada>
 <Portada musica={CiudadGris} setCancion={setCancion} setIsPlaying={setIsPlaying}  ></Portada>
-</div>
-<h1 className="text-white">Otras Canciones:</h1>
-<div className="flex gap-2">
-<Portada musica={Costumbre} setCancion={setCancion} setIsPlaying={setIsPlaying}></Portada>
+<Portada musica={Perdon} setCancion={setCancion} setIsPlaying={setIsPlaying}  ></Portada>
 
 </div>
+<h1 className="text-white">Proximamente más Canciones</h1>
+
 
 
 </div>
