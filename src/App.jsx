@@ -5,9 +5,11 @@ import besosimg from "./assets/besos.jpg";
 import ciudadimg from "./assets/ciudadgris.jpg";
 import costumbreimg from "./assets/costumbre.png";
 import perdonimg from './assets/perdon.jpg';
+import paraimg from './assets/parair.jpeg';
 import Player from "./Componentes/Player";
 import { Portada } from "./Componentes/Portada";
 import { useState } from "react";
+import cancionmp3 from "./assets/parair.mp3";
 //Importamos la canción desde assets
 
 function App() {
@@ -82,14 +84,14 @@ const BesosSaborRon = {
   imagen:besosimg,
   letra: [
     { text: 'Señorita buenas noches 🌃', time: 21 },
-    { text: '¡Dígame usted cómo está 🤔!', time: 25.6 },
+    { text: 'Dígame usted cómo está 🤔', time: 25.6 },
     { text: 'Tomaré el atrevimiento 💪', time: 31 },
     { text: 'y la invitaré a bailar 💃', time: 36 },
     { text: 'Señorita, qué bonita 😉', time: 41 },
     { text: 'no se me vaya a asustar 😬', time: 46 },
     { text: 'Tomaré el atrevimiento 🤞', time: 51 },
     { text: 'y me tiraré a besar 💋', time: 54.5 },
-    { text: 'Besos con sabor a ron 🥃', time: 61 },
+    { text: 'Besos con sabor ron 🥃', time: 61 },
     { text: '¿Qué fue lo que pasó? 🤯', time: 65.5 },
     { text: 'Besos de borracho 🤪', time: 70 },
     { text: 'no fue lo mejor 😢', time: 75.5 },
@@ -101,7 +103,7 @@ const BesosSaborRon = {
     { text: 'si me tengo que "ir a los tiros.." 🔫', time: 108 },
     { text: 'Vente que me gusta estar contigo 🤗', time: 112.5 },
     { text: 'Vente que me gusta estar contigo. 💖', time: 117.2 },
-    { text: 'Besos con sabor a ron... 🥃', time: 127 },
+    { text: 'Besos con sabor ron... 🥃', time: 127 },
     { text: '¡Qué bonito fue.. 🥰!', time: 132 },
     { text: 'Lo que nos pasó 💕💞💖', time: 138 },
   ],
@@ -168,6 +170,61 @@ const Perdon = {
   cancion:"https://od.lk/s/MjFfNDc0MzMzMTZf/WhatsApp-Audio-2023-02-11-at-9.02.28-PM.mp3"
 }
 
+const ParaIrABuscarte = {
+  titulo:"Para Ir A Buscarte",
+  artista:"Luigy Leonardo",
+  nombre: "ParaIrABuscarte",
+  imagen:paraimg,
+  luigiin:200,
+  letra:[
+    {text: "[Música]", time: 0},
+    {text: "No soy adivino", time: 9},
+    {text: "Me imagino ya lo sabes", time: 11},
+    {text: "No veo el futuro", time: 14},
+    {text: "Pero de algo estoy seguro", time: 16},
+    {text: "Que está destinado", time: 19},
+    {text: "Que tu estés a mi lado", time: 21},
+    {text: "Y aunque no es el tiempo", time: 24},
+    {text: "No hay afanes ni frenado", time: 26},
+    {text: "Pero tu tranquila", time: 29},
+    {text: "Que yo le canto al aire", time: 31},
+    {text: "Pa' no confundirte", time: 34},
+    {text: "Para no agobiarte", time: 36},
+    {text: "Solo espero ansioso", time: 39},
+    {text: "El volver a encontrarte", time: 41},
+    {text: "Que el tiempo se acabe", time: 44},
+    {text: "Para ir a buscarte", time: 46},
+    {text: "[Música]", time: 49},
+    {text: "Y cuando te encuentre", time: 49},
+    {text: "Te seré sincero", time: 53},
+    {text: "Y con la mirada", time:55 },
+  {text:"Te diré te quiero",time :57 },
+  {text:"Quiero que te quedes",time :60 },
+  {text:"Lo que dure el cielo",time :62 },
+  {text:"Dime que me esperas",time :65 },
+  {text:"Que si no me muero",time :67 },
+  {text:"No me cambiarás por un made in China",time :70 },
+  {text:"Producto original sacado de la vitrina",time :73 },
+  {text:"O eso, al menos, es lo que mi mente imagina",time :76 },
+  {text:"Pero soy consiente que no es el momento para involucrar todo el sentimiento",time :80 },
+  {text:"Aunque yo te extrañe",time :84 },
+  {text:"Aunque yo te pienso",time :86 },
+  {text:"Disimularé por solo por un tiempo",time :89 },
+  {text:"Tiempo que no pare",time :92 },
+  {text:"El tiempo pausa el sufrimiento",time :94 },
+  {text:"Por solo un instante sacame este trance",time :97 },
+  {text:"Para ya tu magia que me hace amarte",time :100 },
+  {text:"Odio la distancia esta circustancia que no da ganancia me aleja de tu frangracia",time :103 },
+  {text:"No doy importancia porque por ahí dicen que el que persevera alcanza.",time :107 }
+  ]
+  ,
+  // la cancion está localmente en assets
+  cancion:cancionmp3
+  
+}
+
+
+
 const [isPlaying, setIsPlaying] = useState(false);
 
 
@@ -194,7 +251,7 @@ const [isPlaying, setIsPlaying] = useState(false);
 <Portada musica={Pico} setCancion={setCancion} setIsPlaying={setIsPlaying}  ></Portada>
 <Portada musica={CiudadGris} setCancion={setCancion} setIsPlaying={setIsPlaying}  ></Portada>
 <Portada musica={Perdon} setCancion={setCancion} setIsPlaying={setIsPlaying}  ></Portada>
-
+<Portada musica={ParaIrABuscarte} setCancion={setCancion} setIsPlaying={setIsPlaying}  ></Portada>
 </div>
 <h1 className="text-white">Proximamente más Canciones</h1>
 
