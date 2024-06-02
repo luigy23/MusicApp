@@ -4,12 +4,14 @@ import picoimg from "./assets/pico.jpeg";
 import besosimg from "./assets/besos.jpg";
 import ciudadimg from "./assets/ciudadgris.jpg";
 import costumbreimg from "./assets/costumbre.png";
+import floresimg from "./assets/5.webp";
 import perdonimg from './assets/perdon.jpg';
 import paraimg from './assets/parair.jpeg';
 import Player from "./Componentes/Player";
 import { Portada } from "./Componentes/Portada";
 import { useState } from "react";
 import cancionmp3 from "./assets/parair.mp3";
+import floresmp3 from "./assets/Musica/flores2.mp3";
 //Importamos la canción desde assets
 
 function App() {
@@ -223,6 +225,19 @@ const ParaIrABuscarte = {
   
 }
 
+const FLores = {
+  titulo:"Flores",
+  artista:"Luigy Leonardo",
+  nombre: "flores",
+  imagen:floresimg,
+  letra: [
+    { text: '...', time: 0},
+    { text: '', time: 4},
+ ,
+  ],
+  cancion:floresmp3
+
+}
 
 
 const [isPlaying, setIsPlaying] = useState(false);
