@@ -267,6 +267,8 @@ const [isPlaying, setIsPlaying] = useState(false);
 <Portada musica={CiudadGris} setCancion={setCancion} setIsPlaying={setIsPlaying}  ></Portada>
 <Portada musica={Perdon} setCancion={setCancion} setIsPlaying={setIsPlaying}  ></Portada>
 <Portada musica={ParaIrABuscarte} setCancion={setCancion} setIsPlaying={setIsPlaying}  ></Portada>
+<Portada musica={Costumbre} setCancion={setCancion} setIsPlaying={setIsPlaying}  ></Portada>
+<Portada musica={FLores} setCancion={setCancion} setIsPlaying={setIsPlaying}  ></Portada>
 </div>
 <h1 className="text-white">Proximamente más Canciones</h1>
 
